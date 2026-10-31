@@ -1,0 +1,106 @@
+:root {
+    --bg: #1a1a2e;
+    --card: #16213e;
+    --accent: #e94560;
+    --text: #ffffff;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.balance {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.betting-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.color-spot {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid transparent;
+}
+
+.color-spot.active { border-color: #fff; }
+
+.bet-amount {
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: rgba(0,0,0,0.3);
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.dice-area {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.die {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.rolling { animation: shake 0.1s infinite; }
+@keyframes shake {
+    0% { transform: translate(2px, 2px); }
+    50% { transform: translate(-2px, -2px); }
+    100% { transform: translate(2px, -2px); }
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:disabled { background: #555; }

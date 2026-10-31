@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival Color Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🎡 Carnival Color Game</h1>
+            <div class="balance">Coins: <span id="coin-count">100</span></div>
+        </header>
+
+        <div class="betting-board" id="board"></div>
+
+        <div class="action-zone">
+            <div class="dice-area" id="dice-container">
+                <div class="die">?</div>
+                <div class="die">?</div>
+                <div class="die">?</div>
+            </div>
+            <button id="roll-btn">ROLL DICE</button>
+            <p id="message">Place your bets and roll!</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
